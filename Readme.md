@@ -1,6 +1,10 @@
 Docker-Vault
 ================
 
+[![Image Layers](https://badge.imagelayers.io/nyxcharon/docker-vault:latest.svg)](https://imagelayers.io/?images=nyxcharon/docker-vault:latest)
+[![Docker Registry](https://img.shields.io/docker/pulls/nyxcharon/docker-vault.svg)](https://registry.hub.docker.com/u/nyxcharon/docker-vault)
+
+
 What
 --------
 This provides a dockerized image of [Hashicorps Vault](https://www.vaultproject.io/intro/index.html) using an alpine linux base
