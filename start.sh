@@ -3,7 +3,7 @@
 #If the user mounts in their own config, use that, otherwise use the built in config
 if [ -f /config/vault.hcl ]; then
   echo "Using user provided config for vault"
-  /usr/local/bin/dockerize -stdout /var/log/vault_audit.log /usr/local/bin/vault server -config=/config/vault.hcl
+  /usr/local/bin/dockerize -stdout /var/log/vault_audit.log -poll /usr/local/bin/vault server -config=/config/vault.hcl
 else
   echo "Using default config for vault"
 
@@ -24,6 +24,6 @@ else
   if [ ! -z "$CONSUL_PATH" ]; then
     sed -i "s/vault-prod/$CONSUL_PATH/g" /etc/consul.hcl
   fi
-  
-  /usr/local/bin/dockerize -stdout /var/log/vault_audit.log /usr/local/bin/vault server -config=/etc/consul.hcl
+
+  /usr/local/bin/dockerize -stdout /var/log/vault_audit.log -poll /usr/local/bin/vault server -config=/etc/consul.hcl
 fi
