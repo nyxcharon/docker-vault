@@ -1,6 +1,6 @@
 backend "consul" {
   address = "{{ default .Env.CONSUL_ADDR "localhost" }}"
-  path = "{{ default .Env.PATH "vault-prod" }}"
+  path = "{{ default .Env.VAULT_PATH "vault-prod" }}"
   advertise_addr = "{{ default .Env.ADVERTISE_ADDR "http://localhost:8200" }}"
 }
 listener "tcp" {
