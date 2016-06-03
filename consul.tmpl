@@ -1,0 +1,12 @@
+backend "consul" {
+  address = "{{ default .Env.CONSUL_ADDR "localhost" }}"
+  path = "{{ default .Env.VERSION "vault-prod" }}"
+  advertise_addr = "{{ default .Env.ADVERTISE_ADDR "http://localhost:8200" }}"
+}
+listener "tcp" {
+  address = "{{ default .Env.ADDRESS "0.0.0.0:8200" }}"
+  tls_disable = {{ default .Env.TLS_DISABLE "0" }}
+  {{if .Env.VAULT_KEY }}tls_cert_key = "{{ .Env.VAULT_KEY }}" {{end}}
+  {{if .Env.VAULT_CERT }}tls_cert_file = "{{ .Env.VAULT_CERT }}" {{end}}
+}
+disable_mlock = true
