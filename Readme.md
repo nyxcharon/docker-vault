@@ -8,7 +8,7 @@ Docker-Vault
 What
 --------
 This provides a dockerized image of [Hashicorps Vault](https://www.vaultproject.io/intro/index.html) using an alpine linux base
-The image is using Alpine Linux 3.3 and Vault 0.5.2
+The image is using Alpine Linux 3.3 and Vault 0.6.0
 
 Configuration and Running
 ----------
@@ -31,6 +31,7 @@ ADDRESS: Vault listener adddress. Default is "0.0.0.0:8200"
 TLS_DISABLE: Disable tls. Defaults to 0  
 VAULT_KEY: Vault ssl key.  
 VAULT_CERT: Vault ssl cert.  
+CONSUL_DISABLE: Disable auto registration with consul. Defaults to true
 
 
 Example:  
