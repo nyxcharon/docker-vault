@@ -6,7 +6,8 @@ FROM alpine:3.3
 MAINTAINER Barry Martin <bobb.mrtn@gmail.com>
 
 #Dockerize
-RUN apk --update add wget
+RUN apk --update add wget ca-certificates
+RUN update-ca-certificates
 RUN wget --no-check-certificate https://github.com/jwilder/dockerize/releases/download/v0.2.0/dockerize-linux-amd64-v0.2.0.tar.gz
 RUN tar -C /usr/local/bin -xzvf dockerize-linux-amd64-v0.2.0.tar.gz
 
