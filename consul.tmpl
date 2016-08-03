@@ -10,4 +10,10 @@ listener "tcp" {
   {{if .Env.VAULT_KEY }}tls_key_file = "{{ .Env.VAULT_KEY }}" {{end}}
   {{if .Env.VAULT_CERT }}tls_cert_file = "{{ .Env.VAULT_CERT }}" {{end}}
 }
+{{if .Env.STATSITE_ADDR }}
+telemetry {
+  statsite_address = "{{ .Env.STATSITE_ADDR }}"
+  disable_hostname = true
+}
+{{end}}
 disable_mlock = true
