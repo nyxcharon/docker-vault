@@ -31,7 +31,7 @@ ADDRESS: Vault listener adddress. Default is "0.0.0.0:8200"
 TLS_DISABLE: Disable tls. Defaults to 0  
 VAULT_KEY: Vault ssl key.  
 VAULT_CERT: Vault ssl cert.  
-CONSUL_DISABLE: Disable auto registration with consul. Defaults to true
+CONSUL_DISABLE: Disable auto registration with consul. Defaults to true  
 STATSITE_ADDR: The statsite server to send telemetry to. If this var does not exist, the telemetry section will not be created in the config
 
 Example:  
