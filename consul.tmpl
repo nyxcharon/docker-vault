@@ -3,7 +3,7 @@ backend "consul" {
   path = "{{ default .Env.VAULT_PATH "vault-prod" }}"
   advertise_addr = "{{ default .Env.ADVERTISE_ADDR "http://localhost:8200" }}"
   disable_registration = "{{ default .Env.CONSUL_DISABLE "true" }}"
-  cluster_addr = "{{ default .Env.ADVERTISE_ADDR "http://localhost:8200" }}"
+  cluster_addr = "{{ default .Env.CLUSTER_ADDR "http://localhost:8200" }}"
 }
 listener "tcp" {
   address = "{{ default .Env.ADDRESS "0.0.0.0:8200" }}"
