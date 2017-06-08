@@ -8,7 +8,7 @@ Docker-Vault
 What
 --------
 This provides a dockerized image of [Hashicorps Vault](https://www.vaultproject.io/intro/index.html) using an alpine linux base
-The image is using Alpine Linux 3.3 and Vault 0.6.5
+The image is using Alpine Linux 3.3 and Vault 0.7.3
 
 Configuration and Running
 ----------
